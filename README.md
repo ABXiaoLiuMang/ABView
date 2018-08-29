@@ -2,6 +2,7 @@
 用法：
 1.必须继承ABApplication
 2.导入的包build.gradle
+
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 
