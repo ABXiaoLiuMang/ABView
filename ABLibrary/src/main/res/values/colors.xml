@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_style_color">@color/colorPrimary</color>
+
+    <color name="titlebar_left_normal_textColor">#ffffff</color>
+    <color name="titlebar_left_hold_textColor">#ceffffff</color>
+    <color name="divider_color">#dddddd</color>
+
+    <color name="titlebar_bg_color">@color/main_style_color</color>
+    <color name="titlebar_line_color">@color/main_style_color</color>
+
+    <color name="item_listView_hold_bg">#f1f1f1</color>
+    <color name="item_listView_normal_bg">@color/white</color>
+
+    <color name="tab_unselect">#a3a3a3</color>
+
+    <color name="barcolor">@color/colorPrimary</color>
+</resources>

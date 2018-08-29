@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/barcolor">
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/lib_view_back_select_bg"
+        android:paddingRight="5dp"
+        android:textSize="15sp"
+        android:textColor="@drawable/lib_view_titlebar_select_bg"/>
+
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:paddingLeft="10dp"
+        android:drawablePadding="-10dp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="15dp"
+        android:textColor="@drawable/lib_view_titlebar_select_bg"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textColor="@color/titlebar_left_normal_textColor"/>
+</RelativeLayout>

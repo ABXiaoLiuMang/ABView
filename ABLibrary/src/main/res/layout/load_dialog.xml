@@ -1,0 +1,68 @@
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="@drawable/progress_bg"
+    android:orientation="vertical">
+
+
+        <ProgressBar
+            android:id="@+id/pb_load"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/pulltorefresh_progress_loading_bg"
+            />
+
+
+    <TextView
+        android:id="@+id/tv_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="正在加载..."
+        android:textColor="@color/anhei"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"/>
+
+</LinearLayout>-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/loading_dialog_bg"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_centerInParent="true" >
+    <LinearLayout
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+       <!-- style="@style/MyDialogStyle"-->
+<!--        android:indeterminateDrawable="@drawable/pulltorefresh_progress_loading_bg"-->
+        <ProgressBar
+            android:id="@+id/pb_load"
+
+            android:indeterminateDrawable="@drawable/progress_loading_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/tv_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="请稍后..."
+            android:textSize="14sp" />
+    </LinearLayout>
+    </RelativeLayout>

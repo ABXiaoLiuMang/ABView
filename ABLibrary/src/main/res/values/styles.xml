@@ -1,0 +1,84 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:listDivider">@drawable/divider_bg</item>
+        <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert.Self</item>
+        <item name="android:progressBarStyleHorizontal">@style/horizontal_bar_style</item>
+    </style>
+
+
+    <style name="horizontal_bar_style" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bg</item>
+        <item name="android:minHeight">7dip</item>
+        <item name="android:maxHeight">4dip</item>
+    </style>
+
+    <!--Design对话框样式-->
+    <style name="Theme.AppCompat.Light.Dialog.Alert.Self" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/anhei</item> // 按钮颜色
+        <item name="android:colorBackground">#ffffff</item><!--背景颜色-->
+        <item name="android:windowTitleStyle">@style/alertTitleStyle</item>
+        <item name="android:windowAnimationStyle">@style/alertDialogAnimation</item>
+        <item name="android:divider">@drawable/divider_bg</item>
+    </style>
+
+    <!--标题样式-->
+    <style name="alertTitleStyle" parent="Base.DialogWindowTitle.AppCompat">
+        <item name="android:textAppearance">@style/alertTitleText</item>
+    </style>
+    <!--标题字体颜色-->
+    <style name="alertTitleText" parent="Base.TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <!--动画效果-->
+    <style name="alertDialogAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/abc_popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/abc_popup_exit</item>
+    </style>
+
+
+    <!--加载进度对话框样式-->
+    <style name="CustomProgressDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">true</item>  //表示页面设置 false，不变暗
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ProgressStyle">
+        <item name="android:indeterminateDrawable">@drawable/pulltorefresh_progress_loading_bg</item>
+    </style>
+
+    <!--弹窗样式-->
+    <style name="DialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景透明-->
+
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+
+        <item name="android:windowIsTranslucent">true</item>
+        <!--半透明-->
+
+        <item name="android:windowContentOverlay">@null</item>
+        <!--内容覆盖 -->
+
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!-- 窗口样式Dialog -->
+        　　
+    </style>
+
+</resources>
