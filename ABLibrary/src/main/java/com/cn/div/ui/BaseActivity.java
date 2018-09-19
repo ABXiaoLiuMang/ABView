@@ -24,7 +24,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public Bundle bundle;
     private ABProgressDialog progressDialog;
     protected boolean isFirst = true;
-    Unbinder unbinder;
+    public Unbinder unbinder;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

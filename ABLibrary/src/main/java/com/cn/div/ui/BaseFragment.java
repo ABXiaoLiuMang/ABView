@@ -22,7 +22,7 @@ public abstract class BaseFragment extends Fragment {
     public Bundle bundle;
     private ABProgressDialog progressDialog;
     public View view;
-    Unbinder unbinder;
+    public Unbinder unbinder;
     protected boolean isFirst = true;
 
 
