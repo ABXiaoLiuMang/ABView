@@ -13,8 +13,7 @@ import com.cn.div.util.ScreenSwitch;
 import com.cn.div.view.StatusBarSuperUtil;
 
 import butterknife.ButterKnife;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
+import butterknife.Unbinder;
 
 /**
  * 所有界面基类
@@ -24,8 +23,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     public Activity mContext;
     public Bundle bundle;
     private ABProgressDialog progressDialog;
-    protected CompositeDisposable mDisposables;
     protected boolean isFirst = true;
+    Unbinder unbinder;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         mContext = this;
         initSystemBar();
         setContentView(getLayoutId());
-        ButterKnife.bind(this);
+        unbinder = ButterKnife.bind(this);
         bundle = getIntent().getExtras();
         ExitUtils.getInstance().addActivity(this);//记录打开的Act
     }
@@ -88,25 +87,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         goActivity(descClass, null);
     }
 
-    protected void addSubscription(Disposable disposable) {
-        if (mDisposables == null) {
-            mDisposables = new CompositeDisposable();
-        }
-        mDisposables.add(disposable);
-    }
-
-    protected void onUnsubscribe() {
-        if (mDisposables != null) {
-//            mDisposables.dispose();
-            mDisposables.clear();
-            mDisposables = null;
-        }
-    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        onUnsubscribe();
         ExitUtils.getInstance().removeActivity(this);//关闭的Act
+        if (unbinder != null) {
+            unbinder.unbind();
+        }
     }
 }

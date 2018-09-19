@@ -9,12 +9,9 @@ import android.view.ViewGroup;
 
 import com.cn.div.dialog.ABProgressDialog;
 import com.cn.div.util.ScreenSwitch;
-import com.cn.div.view.ABToast;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
 
 /**
  * 所有界面基类
@@ -27,7 +24,6 @@ public abstract class BaseFragment extends Fragment {
     public View view;
     Unbinder unbinder;
     protected boolean isFirst = true;
-    protected CompositeDisposable mDisposables;
 
 
     public void onCreate(Bundle savedInstanceState) {
@@ -100,28 +96,12 @@ public abstract class BaseFragment extends Fragment {
         goActivity(descClass, null);
     }
 
-    protected void addSubscription(Disposable disposable) {
-        if (mDisposables == null) {
-            mDisposables = new CompositeDisposable();
-        }
-        mDisposables.add(disposable);
-    }
-
-    protected void onUnsubscribe() {
-        if (mDisposables != null) {
-//            mDisposables.dispose();
-            mDisposables.clear();
-            mDisposables = null;
-        }
-    }
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         if (unbinder != null) {
             unbinder.unbind();
         }
-        onUnsubscribe();
     }
 
 }
